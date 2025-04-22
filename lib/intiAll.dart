@@ -1,4 +1,5 @@
 
+import 'package:biolo_app/layers/presentation/ui/controller/theme/dark_and_light_switch_controller.dart';
 import 'package:biolo_app/layers/presentation/ui/pages/splash_pages/splash_1_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,11 +14,13 @@ class InitAllPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return AnimatedBuilder(animation: DarkAndLightThemeController.instaceDark, builder:(context, child) {
+     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Biolo',
-      theme: ThemeData(
       
+      theme: ThemeData(
+      brightness:DarkAndLightThemeController.instaceDark.themeDark ?  Brightness.dark : Brightness.light ,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -29,12 +32,8 @@ class InitAllPage extends StatelessWidget {
 "/acessNewRegisterPage":(context)=>const AcessNewRegisterPage(),
 "/login_page":(context)=>const LoginPage(),
 
-
-
-
-
-
      }
     );
+    },);
   }
 }

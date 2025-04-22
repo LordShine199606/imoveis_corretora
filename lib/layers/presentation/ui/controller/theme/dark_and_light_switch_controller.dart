@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class DarkAndLightThemeController extends  ChangeNotifier{
+  static DarkAndLightThemeController instaceDark = DarkAndLightThemeController();
      bool themeDark = false;
-
-    void DarkMyTheme(){
+     DarkMyTheme(){
 
       themeDark = ! themeDark;
      notifyListeners();
