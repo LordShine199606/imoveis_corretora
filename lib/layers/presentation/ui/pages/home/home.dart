@@ -1,3 +1,4 @@
+import 'package:biolo_app/layers/presentation/ui/controller/theme/dark_and_light_switch_controller.dart';
 import 'package:biolo_app/layers/presentation/ui/pages/home/principal.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -31,7 +32,14 @@ static List<Widget> _pageList =<Widget>[
 int _seletedIndexGnav=0;
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
+      appBar: (AppBar(actions: [
+        Switch(value: DarkAndLightThemeController.instaceDark.themeDark, onChanged:(value) {
+          DarkAndLightThemeController.instaceDark..DarkMyTheme();
+        },
+        )
+      ],)),
       body:_pageList.elementAt(_seletedIndexGnav
         ),
        bottomNavigationBar:Padding(
