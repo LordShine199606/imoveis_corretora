@@ -4,7 +4,7 @@ import 'core/inject/inject.dart';
 import 'intiAll.dart';
 Future<void> main()  async{
 
-  ModularApp(module: , child: null,)
+  // ModularApp(module: , child: null,)
   print("antes de iniciar o inject");
  Inject.init();
   print("depois de iniciar o inject");

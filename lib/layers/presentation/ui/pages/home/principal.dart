@@ -1,3 +1,4 @@
+import 'package:biolo_app/layers/data/dto/casa_dto.dart';
 import 'package:biolo_app/layers/presentation/components/colors_const.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -13,7 +14,35 @@ class Principal extends StatefulWidget {
 
 class _PrincipalState extends State<Principal> {
 
-  
+
+ final List<CasaDto> casa1=[
+
+CasaDto(
+  descricaoCAsaDto: "Casa Beira mar",
+  idCasaDto: 0,
+  proprietarioIdDto: 0,
+  enderecoCasaDto: "Samba",
+  estadoCasaDto: true,
+  precoCasaDto: 1000.000,
+  tipoCasaDto: "Praia",
+  topologiaCasaDto: "t3"
+
+),
+CasaDto(
+  descricaoCAsaDto: "Casa Beira mar",
+  idCasaDto: 1,
+  proprietarioIdDto: 1,
+  enderecoCasaDto: "Samba",
+  estadoCasaDto: true,
+  precoCasaDto: 1500.000,
+  tipoCasaDto: "Praia",
+  topologiaCasaDto: "t3"
+
+),
+
+
+ ];
+
   List<String> nameCategorie = [
     "Luanda",
     "Benguela",
@@ -22,11 +51,7 @@ class _PrincipalState extends State<Principal> {
     "Malanje",
     "Bengo"
   ];
-  Map<String, dynamic> houseInfo = {
-    
-    "Nome": "CasaNovaRu"
-    
-    };
+ 
 
   int? _itemSelected;
   String titlePric = "Intermediario_user";
